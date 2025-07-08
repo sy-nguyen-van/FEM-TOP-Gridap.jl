@@ -9,3 +9,12 @@ It serves as a practical reference for setting up meshes, defining FE spaces, fo
 This repository is a personal learning collection and does not cover all of Gridap.jl’s capabilities.
 
 📌 **Readers are encouraged to refer to the official Gridap.jl documentation for full details, examples, and advanced usage: [https://github.com/gridap/Gridap.jl](https://github.com/gridap/Gridap.jl)**.
+
+🛠️ **Prerequisites**  
+- **Install Julia:** Download and install from [julialang.org](https://julialang.org/downloads/).  
+- **Install Gridap:** Add the `Gridap` package:
+  ```julia
+  using Pkg
+  Pkg.add("Gridap")
+  ```
+- **Recommended Environment for Windows users:**  The authors are using Visual Studio Code with the Jupyter Notebook extension for running and editing Julia code interactively.
