@@ -1,3 +1,4 @@
+# Reference: https://www.topopt.mek.dtu.dk/
 function OC(ρ, volfrac, dc, num_ele)
     ρ_min = 0.001
     l1 = 0.0
