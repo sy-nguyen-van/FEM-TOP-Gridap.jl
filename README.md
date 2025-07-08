@@ -18,3 +18,12 @@
   Pkg.add("Gridap")
   ```
 - **Recommended Environment for Windows users:**  The authors are using Visual Studio Code with the Jupyter Notebook extension for running and editing Julia code interactively.
+- 
+## 📥 Clone this repository
+
+To get started, clone the repository to your local machine using:
+
+```
+git clone https://github.com/sy-nguyen-van/Finite-Element-Method-with-Gridap.jl
+```
+
