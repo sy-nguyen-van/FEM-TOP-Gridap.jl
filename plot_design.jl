@@ -3,8 +3,8 @@ function plot_design(ρ_new, cell_coords, iter, L, W)
     # Range of limit of colors
     range_limits = (0, 1)
     # Polygon for FE MESH
-    shape_polygon = [Point2f[(cell_coords[e][1][1], cell_coords[e][1][2]),
-        (cell_coords[e][2][1], cell_coords[e][2][2]), 
+    shape_polygon = [Point2f[(cell_coords[e][1][1], cell_coords[e][1][2]), # Node 1
+        (cell_coords[e][2][1], cell_coords[e][2][2]), # Node 2
         (cell_coords[e][4][1], cell_coords[e][4][2]),
         (cell_coords[e][3][1], cell_coords[e][3][2])] for e in 1:no_ele]
     fontsize = 16
