@@ -1,4 +1,3 @@
-using Base.Iterators
 function plot_design(ρ_new, cell_coords, iter, L, W)
     # Range of limit of colors
     range_limits = (0, 1)
