@@ -29,6 +29,7 @@ function fd_check_constraint(OPT::OPT_struct, FE::FE_struct,SGs::SGs_struct)
         dv_i[i] = dv_0[i] + fd_step
         theta_i, _, _, _ = nonlcon(OPT, FE, SGs, dv_i)
         grad_theta_i[i] = (theta_i- theta_0)/ fd_step
+
         error = grad_theta_0[i] - grad_theta_i[i]
 
         if abs(error) > abs(max_error)
@@ -36,6 +37,7 @@ function fd_check_constraint(OPT::OPT_struct, FE::FE_struct,SGs::SGs_struct)
             max_error_dv = i
         end
         rel_error = error / theta_0 
+        
         if abs(rel_error) > abs(max_rel_error)
             max_rel_error = rel_error
             max_rel_error_dv = i

@@ -2,12 +2,11 @@ function filters(filter_radius, Ω)
     # Compute centroids of elements and store in a matrix
     cell_coords = get_cell_coordinates(Ω) # Get coordinates of vertices for each cell
     no_ele = length(cell_coords) # Number of elements
-    centroid_matrix = zeros(3, no_ele) # Matrix to store centroids (no_ele × 2)
-
+    centroid_matrix = zeros(length(cell_coords[1][1]), no_ele) # Matrix to store centroids 
     for (cell_id, coords) in enumerate(cell_coords)
         # Compute centroid by averaging vertex coordinates
         centroid = sum(coords) / length(coords)
-        centroid_matrix[:, cell_id] = [centroid[1], centroid[2], centroid[3]] # Store x, y coordinates
+        centroid_matrix[:, cell_id] .= collect(Tuple(centroid)) # Store x, y coordinates
     end
 
     # Number of neighbors for each element
